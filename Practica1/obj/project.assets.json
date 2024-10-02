@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlo\\3IMAT\\ParadigmasProgramacion\\Practica1\\Practica_1.csproj",
-      "projectName": "Practica_1",
-      "projectPath": "C:\\Users\\carlo\\3IMAT\\ParadigmasProgramacion\\Practica1\\Practica_1.csproj",
+      "projectUniqueName": "C:\\Users\\carlo\\3IMAT\\ParadigmasProgramacion\\paradigmas\\Practica1\\Practice1.csproj",
+      "projectName": "Practice1",
+      "projectPath": "C:\\Users\\carlo\\3IMAT\\ParadigmasProgramacion\\paradigmas\\Practica1\\Practice1.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\3IMAT\\ParadigmasProgramacion\\Practica1\\obj\\",
+      "outputPath": "C:\\Users\\carlo\\3IMAT\\ParadigmasProgramacion\\paradigmas\\Practica1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",

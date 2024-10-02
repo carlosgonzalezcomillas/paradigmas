@@ -1,36 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Practica_1
+﻿namespace Practice1
 {
-    // Base abstract class Vehicle -> Cab or Police
-    public abstract class Vehicle : IMessageWriter
+    abstract class Vehicle : IMessageWritter
     {
-        public string Type { get; protected set; }
-        public string Plate { get; protected set; }
-        public int Speed { get; protected set; }
+        private string typeOfVehicle;
+        private string? plate;
+        private float speed;
 
-        public Vehicle(string type, string plate, int speed)
+        public Vehicle(string typeOfVehicle, string? plate = null)
         {
-            Type = type;
-            Plate = plate;
-            Speed = speed;
+            this.typeOfVehicle = typeOfVehicle;
+            this.plate = plate;
+            speed = 0f;
         }
 
-        public abstract void StartWork();
-        public abstract void FinishWork();
-
-        public virtual string WriteMessage(string customMessage)
-        {
-            return $"{Type} with plate {Plate}: {customMessage}";
-        }
-
+        //Override ToString() method with class information
         public override string ToString()
         {
-            return WriteMessage("Created");
+            return plate != null ? $"{GetTypeOfVehicle()} with plate {GetPlate()}" : $"{GetTypeOfVehicle()} (no plate)";
+        }
+
+        public string GetTypeOfVehicle()
+        {
+            return typeOfVehicle;
+        }
+
+        public string? GetPlate()
+        {
+            return plate;
+        }
+
+
+        public float GetSpeed()
+        {
+            return speed;
+        }
+
+        public void SetSpeed(float speed)
+        {
+            this.speed = speed;
+        }
+
+        //Implment interface with Vechicle message structure
+        public string WriteMessage(string message)
+        {
+            return $"{this}: {message}";
         }
     }
 }
