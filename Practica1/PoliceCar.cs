@@ -15,6 +15,12 @@
             speedRadar = null;
         }
 
+        public void AssignRadar(SpeedRadar radar)
+        {
+            speedRadar = radar;
+            Console.WriteLine(WriteMessage("Radar assigned."));
+        }
+
         public void UseRadar(Vehicle vehicle)
         {
             if (isPatrolling)
@@ -83,6 +89,7 @@
         {
             if (!isPersecuting)
             {
+                isPersecuting = true;
                 Console.WriteLine($"Police car {GetPlate()} is persecuting taxi {crimePlate}");
             }
             else if (isPersecuting)
